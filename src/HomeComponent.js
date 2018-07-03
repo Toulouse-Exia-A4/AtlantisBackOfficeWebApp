@@ -15,7 +15,7 @@ export default compose(
     withState('users', 'updateUsers', []),
     withHandlers({
         refresh: props => event => {
-            axios.get('http://localhost:11111/BackOfficeService.svc/users')
+            axios.get('http://localhost:30040/BackOfficeService.svc/users')
                 .then(response => {
                     props.updateUsers(response.data);
                 })
@@ -24,7 +24,7 @@ export default compose(
                     console.error(error.response.data);
                 });
 
-            axios.get('http://localhost:11111/BackOfficeService.svc/freedevices')
+            axios.get('http://localhost:30040/BackOfficeService.svc/freedevices')
                 .then(response => {
                     props.updateDevices(response.data);
                 })

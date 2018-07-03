@@ -22,7 +22,7 @@ export default compose(
     withHandlers({
         onLogin: props => event => {
             event.preventDefault();
-            axios.post('http://localhost:11111/BackOfficeService.svc/login', {username: props.username, password: props.password})
+            axios.post('http://localhost:30040/BackOfficeService.svc/login', {username: props.username, password: props.password})
                 .then((response) => {
                     if(!_.isNil(response.data)) {
                         if(response.data.LoginResult) {

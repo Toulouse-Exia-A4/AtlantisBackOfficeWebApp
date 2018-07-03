@@ -12,7 +12,7 @@ export default compose(
             const userId = props.user.userId;
 
             axios.post(
-                'http://localhost:11111/BackOfficeService.svc/linkdevice',
+                'http://localhost:30040/BackOfficeService.svc/linkdevice',
                 {
                     userId: userId,
                     deviceId: deviceId
